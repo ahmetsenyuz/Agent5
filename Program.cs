@@ -25,19 +25,33 @@ namespace Agent5
                 }
             }
 
-            Console.WriteLine($"Counting to {maxNumber}:");
-            for (int i = 1; i <= maxNumber; i++)
+            try
             {
-                try
+                Console.WriteLine($"Counting to {maxNumber}:");
+                for (int i = 1; i <= maxNumber; i++)
                 {
-                    Console.WriteLine(i);
-                    Task.Delay(500).Wait();
+                    try
+                    {
+                        Console.WriteLine(i);
+                        Task.Delay(500).Wait();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error during counting: {ex.Message}");
+                        break;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error during counting: {ex.Message}");
-                    break;
-                }
+                
+                Console.WriteLine("Counting completed successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Unexpected error occurred: {ex.Message}");
+            }
+            finally
+            {
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
             }
         }
     }
