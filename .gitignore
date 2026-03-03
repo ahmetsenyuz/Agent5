@@ -1,0 +1,52 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 2015/2017/2019 cache/options
+.vs/
+*.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Visual Studio 2015 - 2019 temporary files
+*.tmp
+*.temp
+
+# Visual Studio 2019 cache
+*.cache
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# NuGet packages
+packages/
+*.nuget/
+
+# IDE
+.idea/
