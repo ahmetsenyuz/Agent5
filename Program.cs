@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Agent5
 {
@@ -27,7 +28,16 @@ namespace Agent5
             Console.WriteLine($"Counting to {maxNumber}:");
             for (int i = 1; i <= maxNumber; i++)
             {
-                Console.WriteLine(i);
+                try
+                {
+                    Console.WriteLine(i);
+                    Task.Delay(500).Wait();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error during counting: {ex.Message}");
+                    break;
+                }
             }
         }
     }
